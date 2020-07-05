@@ -1,3 +1,6 @@
+Main files are client.c and server.c , the other ones is additional.
+
+CLion IDE were used. Add separate files as an executables to cmakelists.txt. Also you can use ide plugin for the make, bt cmake is better to debug. 
 Client-server application for building/compiling c-sources on the server-side with returning of the result of building/compilation back to the client.
 -- Done --
 0. The server listens on the given port (by default, port 1234, can be set at startup through the -p option) and accepts requests from clients (in an infinite loop).
