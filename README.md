@@ -1,12 +1,11 @@
 Client-server application for building/compiling c-sources on the server-side with returning of the result of building/compilation back to the client.
-
+-- Done --
 0. The server listens on the given port (by default, port 1234, can be set at startup through the -p option) and accepts requests from clients (in an infinite loop).
 You can pass the server address and port to the client
 (by default 127.0.0.1 1234, controlled by the -d and -p options), as well as the file path.
 The client should send the given file to the server, before the file there is a heading of the form "File <filename> \ n" (filename is the file name).
 The server should compile the file with the C compiler and in response send a compilation verdict (Result: OK / Fail),
 if Fail - an error log.
--- Done --
   
 @ToDo
 1. Add the ability to compile multiple files.
