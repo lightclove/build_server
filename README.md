@@ -12,16 +12,20 @@ if Fail - an error log.
 1. Add the ability to compile multiple files.
 File paths are passed to the client. The client sends these files to the server with the heading "Number: <number of files> \ n".
 The files themselves follow, each with a header of "File <filename> \ n".
+  
 @ToDo
 2. Add the ability to optionally transfer the Makefile.
-The client has the option -m <file path>, when transferring the client uses the header "Makefile: <filename> \ n".
+The client has the option -m <file path>, when transferring the cli
+  nt uses the header "Makefile: <filename> \ n".
 In this case, the server should use make with this Makefile.
+  
 @ToDo
 3. Add the ability to remotely update the server on the fly.
 The option for the client is -u, the client adds the heading "Upgrade \ n" to the beginning and then the files as usual
 (number, files themselves, makefile if given).
 The server should compile as usual, and if everything is successful, then replace your process with a new version.
 If compilation failed, send an error to the client in response.
+
 @ToDo
 4. Add the signal processing SIGUSR1 to the server.
 Upon receipt of this signal, the server should terminate all connections, and then continue to work.
